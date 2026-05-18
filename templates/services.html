@@ -1,0 +1,106 @@
+# `services.html`
+
+Replace your current `services.html` with this:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services | Little Touch</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo-container">
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            class="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO IMAGE -->
+    <section class="services-hero-image">
+
+        <img src="{{ url_for('static',
+        filename='images/services-banner.png') }}"
+        class="full-service-image">
+
+        <div class="services-overlay">
+
+            <h1>Our Services</h1>
+
+            <p>
+                Crafted with care, stitched with love,
+                designed for life’s tiniest treasures.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES LIST -->
+    <section class="services-list">
+
+        <div class="service-box">
+            <h2>Baby Clothing Manufacturing</h2>
+            <p>Premium baby wear manufacturing for newborns, infants, and toddlers with comfort-focused designs.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Custom Baby Wear Design</h2>
+            <p>Customized baby clothes including unique patterns, prints, embroidery, colors, and fabrics.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Bulk & Wholesale Orders</h2>
+            <p>Wholesale baby wear manufacturing for boutiques, retailers, resellers, and online stores.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Fabric Selection & Sampling</h2>
+            <p>Premium baby-safe fabrics with sample products before bulk production.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Stitching Services</h2>
+            <p>High-quality stitching with careful finishing, comfort-focused seams, and premium craftsmanship.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Buttoning & Finishing</h2>
+            <p>Professional buttoning, fastening, detailing, and garment finishing for durability and comfort.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Packaging & Branding</h2>
+            <p>Customized packaging solutions including tags, labels, and premium product presentation.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Nationwide Shipping</h2>
+            <p>Reliable shipping and delivery support across India.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
+

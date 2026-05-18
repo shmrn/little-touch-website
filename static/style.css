@@ -1,0 +1,610 @@
+@font-face{
+    font-family:"Modern Serif Eroded";
+    src:url("/static/fonts/Modern%20Serif%20Eroded.ttf")
+    format("truetype");
+}
+@font-face{
+    font-family:"Rooster";
+    src:url("/static/fonts/Rooster.ttf")
+    format("truetype");
+}
+body{
+    margin:0;
+    font-family:"Modern Serif Eroded", sans-serif;
+    background:#D1EAF0;
+    background-image:
+url("/static/images/background.gif");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+}
+
+.logo{
+    width:280px;
+}
+
+.nav-links a{
+    margin-left:35px;
+    text-decoration:none;
+    color:#222;
+    font-size:13px;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+    padding:0;
+}
+
+
+/* HEADLINE */
+
+/* HIDE OVERFLOW */
+
+.headline-container{
+    width:100%;
+    overflow:hidden;
+    white-space:nowrap;
+    margin:40px 0;
+}
+
+
+/* MOVING TRACK */
+
+.headline-track{
+    display:flex;
+    width:max-content;
+
+    animation:
+    seamlessScroll 10s linear infinite;
+}
+
+
+/* HEADLINE */
+
+.headline{
+    font-family:"Victory Striker Sans", sans-serif;
+    font-size:72px;
+    font-weight:900;
+    margin:0;
+    padding-right:50px;
+}
+
+
+/* COLORS */
+
+.pink{
+    color:#FF00B8;
+}
+
+.blue{
+    color:#1A237E;
+}
+
+
+/* CONTINUOUS SCROLL */
+
+@keyframes seamlessScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+
+/* CONTENT ALIGNMENT */
+
+.hero-content{
+    position:relative;
+}
+.left-section{
+    position:absolute;
+
+    top:50%;
+    left:8%;
+
+    transform:translateY(-50%);
+
+    z-index:2;
+
+    width:400px;
+}
+
+/* LEFT SECTION */
+
+.left-section{
+    width:300px;
+}
+
+.description{
+    font-family:"Modern Serif Eroded", sans-serif;
+    color:#1b1b4d;
+    font-size:22px;
+    font-weight:700;
+
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    font-family:"Germany Sans", sans-serif;
+    background:#171B4A;
+    color:white;
+    text-decoration:none;
+    padding:18px 50px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:500;
+}
+
+
+/* RIGHT IMAGE */
+
+.baby-image{
+    width:100vw;
+    height:100vh;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+
+    margin-top:70px;
+    padding-bottom:80px;
+}
+
+.category-card{
+    text-align:center;
+}
+
+.flower-image{
+    width:260px;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    clip-path:polygon(
+
+50% 0%,
+
+58% 3%,
+66% 8%,
+
+74% 6%,
+82% 12%,
+
+88% 20%,
+94% 28%,
+
+92% 38%,
+98% 50%,
+
+92% 62%,
+94% 72%,
+
+88% 80%,
+82% 88%,
+
+74% 94%,
+66% 92%,
+
+58% 97%,
+50% 100%,
+
+42% 97%,
+34% 92%,
+
+26% 94%,
+18% 88%,
+
+12% 80%,
+6% 72%,
+
+8% 62%,
+2% 50%,
+
+8% 38%,
+6% 28%,
+
+12% 20%,
+18% 12%,
+
+26% 6%,
+34% 8%,
+
+42% 3%
+
+);
+    
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
+
+    transition:0.3s;
+}
+
+.flower-image:hover{
+    transform:scale(1.04);
+}
+
+.category-card h3{
+
+    font-family:"Rooster",
+    sans-serif;
+    color:#1A237E;
+    font-size:34px;
+    margin-top:5px;
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+    text-underline-offset:8px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#171B4A;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    padding:70px 80px;
+
+    margin-top:100px;
+}
+
+.footer-section{
+    display:flex;
+    flex-direction:column;
+
+    min-width:220px;
+
+    margin-bottom:30px;
+}
+
+.footer-section h2{
+    font-size:24px;
+
+    margin-bottom:20px;
+
+    color:#ffffff;
+     text-decoration:underline;
+
+}
+
+.footer-section p,
+.footer-section a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:6px 0;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+.footer-section a:hover{
+    color:#FFD1DF;
+}
+
+/* FAQ PAGE */
+
+.faq-page{
+    max-width:1200px;
+    margin:auto;
+
+    padding:80px 40px;
+}
+
+.faq-title{
+    text-align:center;
+
+    font-size:52px;
+
+    color:black;
+
+    margin-bottom:60px;
+}
+
+
+/* SECTION HEADINGS */
+
+.faq-section{
+    margin-bottom:70px;
+}
+
+.faq-section h2{
+    font-size:34px;
+
+    color:black;
+
+    margin-bottom:35px;
+
+    border-bottom:2px solid #ddd;
+
+    padding-bottom:10px;
+}
+
+
+/* QUESTIONS */
+
+.faq-item{
+    margin-bottom:35px;
+}
+
+.faq-item h3{
+    color:#FF00B8;
+    font-family: Arial, sans-serif;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+
+/* ANSWERS */
+
+.faq-item p{
+    color:black;
+    font-family: Arial, sans-serif;
+    font-size:19px;
+    line-height:1.9;
+}
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services | Little Touch</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo-container">
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            class="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO IMAGE -->
+    <section class="services-hero-image">
+
+        <img src="{{ url_for('static',
+        filename='images/services-banner.png') }}"
+        class="full-service-image">
+
+        <div class="services-overlay">
+
+            <h1>Our Services</h1>
+
+            <p>
+                Crafted with care, stitched with love,
+                designed for life’s tiniest treasures.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES LIST -->
+    <section class="services-list">
+
+        <div class="service-box">
+            <h2>Baby Clothing Manufacturing</h2>
+            <p>Premium baby wear manufacturing for newborns, infants, and toddlers with comfort-focused designs.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Custom Baby Wear Design</h2>
+            <p>Customized baby clothes including unique patterns, prints, embroidery, colors, and fabrics.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Bulk & Wholesale Orders</h2>
+            <p>Wholesale baby wear manufacturing for boutiques, retailers, resellers, and online stores.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Fabric Selection & Sampling</h2>
+            <p>Premium baby-safe fabrics with sample products before bulk production.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Stitching Services</h2>
+            <p>High-quality stitching with careful finishing, comfort-focused seams, and premium craftsmanship.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Buttoning & Finishing</h2>
+            <p>Professional buttoning, fastening, detailing, and garment finishing for durability and comfort.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Packaging & Branding</h2>
+            <p>Customized packaging solutions including tags, labels, and premium product presentation.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Nationwide Shipping</h2>
+            <p>Reliable shipping and delivery support across India.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
+
+
+
+/* SERVICES PAGE */
+
+.services-hero-image{
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+}
+
+.full-service-image{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.services-overlay{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    text-align:center;
+
+    color:white;
+
+    background:rgba(0,0,0,0.25);
+
+    padding:40px 50px;
+
+    border-radius:35px;
+}
+
+.services-overlay h1{
+    font-size:60px;
+
+    margin-bottom:15px;
+}
+
+.services-overlay p{
+    font-family:Arial, sans-serif;
+
+    font-size:20px;
+
+    line-height:1.8;
+}
+
+.services-list{
+    padding:80px;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.service-box{
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+}
+
+.service-box h2{
+    color:#FF00B8;
+
+    margin-bottom:12px;
+}
+
+.service-box p{
+    font-family:Arial, sans-serif;
+
+    color:black;
+
+    line-height:1.8;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .headline{
+        font-size:40px;
+    }
+
+    .hero-content{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .baby-image{
+        width:300px;
+    }
+
+    .navbar{
+        padding:20px;
+    }
+}
+.about-btn{
+    background:#171B4A;
+    color:white !important;
+
+    padding:14px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+}

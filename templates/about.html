@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo-container">
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        class="logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+</nav>
+
+
+<section class="about-page">
+
+    <h1>About Little Touch</h1>
+
+    <p>
+        We create thoughtful designs that
+        turn little moments into beautiful beginnings.
+        Little Touch focuses on comfort,
+        care, and timeless style for every child.
+    </p>
+
+</section>
+
+</body>
+</html>
