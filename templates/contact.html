@@ -1,43 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+    <title>Contact | Little Touch</title>
+
     <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+    href="{{ url_for('static',
+    filename='style.css') }}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 </head>
 
 <body>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-<h1>Contact Us</h1>
+        <div class="logo-container">
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            class="logo">
+        </div>
 
-<p>
-    Email:
-    <a href="mailto:littletouch789@gmail.com">
-        littletouch789@gmail.com
-    </a>
-</p>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </div>
 
-<p>
-    Instagram:
-    <a href="https://www.instagram.com/littletouchbabycare/"
-       target="_blank">
-       @littletouchbabycare
-    </a>
-</p>
+    </nav>
 
-<p>
-    Phone:
-    <a href="tel:+919048994799">
-        +91 9048994799
-    </a>
-</p>
+
+    <!-- CONTACT PAGE -->
+    <section class="contact-section">
+    <!-- TOP -->
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>
+            We're here to help you and your little ones.
+            Whether you have a question about orders,
+            fabrics, or simply want to connect,
+            we'd love to hear from you.
+        </p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+
+            <h2>Get in Touch</h2>
+
+            <p class="contact-description">
+                Our support team is available from
+                Monday to Saturday, 9:00 AM to 6:00 PM.
+                We aim to respond to all inquiries
+                within 24 hours.
+            </p>
+
+            <!-- CONTACT CARDS -->
+            <div class="contact-boxes">
+
+                <div class="contact-card">
+                    <h4>EMAIL US</h4>
+                    <a href="mailto:littletouch789@gmail.com">
+                        littletouch789@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>CALL US</h4>
+                    <a href="tel:+919048994799">
+                        Customer Care: +91 9048994799<br>
+                    </a>
+                    <a href="tel:+919048998699">
+                        Office Cont: +91 9048998699<br>
+                    </a>
+                    <a href="tel:+919048998299">
+                        AGM: +91 9048998299
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>OUR ADDRESS</h4>
+                    <i class="fas fa-map-marker-alt"
+                       style="color:#1877F2; font-size:24px; margin-bottom:8px; display:block;">
+                    </i>
+                    <p>
+                        LANZO APPARELS LLP,<br>
+                        THIRUVALI POST,<br>
+                        MALAPPURAM DISTRICT,<br>
+                        KERALA - 676123,<br>
+                        INDIA
+                    </p>
+                </div>
+
+            </div>
+            <!-- END CONTACT CARDS -->
+
+            <!-- SOCIAL -->
+            <div class="social-section">
+                <h5>FOLLOW OUR JOURNEY</h5>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/littletouchbabycare/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61557069882388" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/little-touch-44b73a40b/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/919048994799" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- END SOCIAL -->
+
+        </div>
+        <!-- END LEFT -->
+
+        <!-- RIGHT -->
+        <div class="promise-card">
+
+            <h2>Our Promise</h2>
+
+            <ul>
+                <li>
+                   Every Little Touch garment is 
+                   designed with comfort and care, 
+                   offering quality baby wear at affordable prices.
+
+                </li>
+                <li>
+                    Thoughtfully designed and
+                    carefully manufactured with
+                    love and attention to detail.
+                </li>
+                <li>
+                    Quality tested to ensure
+                    comfort, durability,
+                    and timeless style.
+                </li>
+            </ul>
+
+            <p class="promise-text">
+                "Wrapping every childhood
+                moment with comfort and care."
+            </p>
+
+        </div>
+        <!-- END RIGHT -->
+
+    </div>
+    <!-- END CONTACT CONTAINER -->
+
+</section>
+
+        <!-- LOCATION MAP -->
+<section class="map-section">
+
+    <h2 class="map-title">
+        Visit Our Location
+    </h2>
+
+    <div class="map-container">
+
+        <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.87272664752!2d76.17265569999999!3d11.197051400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba637c91369fd49%3A0x7bb754d383b9d025!2sLITTLE%20TOUCH!5e0!3m2!1sen!2sin!4v1779446250424!5m2!1sen!2sin" 
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    </section>
 
 </body>
 </html>

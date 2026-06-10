@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Little Touch</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo-container">
+
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        class="logo">
+
+    </div>
+
+</nav>
+
+
+<section class="product-page">
+
+    <!-- LEFT -->
+    <div class="product-left">
+
+        <!-- Main Image -->
+        <img id="product-image"
+        src="/static/images/{{ images[0] }}"
+        class="product-main-image">
+
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-row">
+
+            {% for image in images %}
+
+            <img src="/static/images/{{ image }}"
+            onclick="changeImage(
+            '/static/images/{{ image }}'
+            )"
+            class="thumbnail">
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="product-right">
+
+        <h1>New Arrival</h1>
+
+        <h2>{{ dress_id }}</h2>
+
+      <p class="fabric">
+
+    <strong>Fabric:</strong>
+
+    {{ fabric }}
+
+</p>
+<p class="size">
+
+    <strong>Available Sizes:</strong>
+
+    {{ size }}
+
+</p>
+
+        <p>
+            Crafted with comfort,
+            softness, and thoughtful
+            care for your little ones.
+
+            Designed for everyday
+            comfort and timeless style.
+        </p>
+
+        <h3>Available Colours</h3>
+
+        <div class="thumbnail-row">
+
+            {% for image in images %}
+
+            <img src="/static/images/{{ image }}"
+            onclick="changeImage(
+            '/static/images/{{ image }}'
+            )"
+            class="thumbnail">
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function changeImage(image){
+
+document.getElementById(
+"product-image"
+).src = image;
+
+}
+
+</script>
+
+</body>
+</html>

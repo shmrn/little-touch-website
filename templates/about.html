@@ -1,44 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Us</title>
+    <title>About | Little Touch</title>
 
     <link rel="stylesheet"
-    href="{{ url_for('static',
-    filename='style.css') }}">
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-    <div class="logo-container">
+        <div class="logo-container">
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            class="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+    
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+
         <img src="{{ url_for('static',
-        filename='images/logo.png') }}"
-        class="logo">
-    </div>
+        filename='images/about-banner.png') }}"
+        class="about-banner">
 
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-</nav>
-
-
-<section class="about-page">
-
-    <h1>About Little Touch</h1>
-
-    <p>
-        We create thoughtful designs that
-        turn little moments into beautiful beginnings.
-        Little Touch focuses on comfort,
-        care, and timeless style for every child.
-    </p>
-
-</section>
+    </section>
+<section class="brand-story-section">
 
 </body>
+    <!-- STORY TEXT -->
+    <div class="brand-story-text">
+
+        <p>
+            Founded with a passion for creating affordable and comfortable baby wear, <strong>Little Touch</strong> was born with a simple vision: to make beautiful, high-quality clothing accessible to every family. We specialize in budget-friendly baby wear that combines comfort, practicality, and timeless style for newborns and toddlers up to 2 years of age.
+
+At Little Touch, we believe every child deserves clothing that feels soft, gentle, and comfortable. That's why we carefully design each garment using quality fabrics, thoughtful craftsmanship, and attention to detail, ensuring excellent value, durability, and everyday comfort for growing little ones.
+
+
+        </p>
+
+        <p>
+           Our commitment is to provide parents with stylish, reliable, and affordable baby wear that supports precious childhood moments while keeping quality and care at the heart of everything we create.
+
+        </p>
+
+    </div>
+
+
+    <!-- MISSION & VISION -->
+    <div class="mission-vision-wrapper">
+
+        <!-- MISSION -->
+        <div class="mission-box">
+
+            <div class="icon-circle">
+                ◎
+            </div>
+
+            <h2>Our Mission</h2>
+
+            <p>
+             To provide little ones with comfortable, 
+             quality clothing at affordable prices, 
+             thoughtfully designed for softness, safety,
+             and everyday wear — while giving families
+             great value and confidence in every stitch.
+
+            </p>
+
+        </div>
+
+
+        <!-- VISION -->
+        <div class="mission-box">
+
+            <div class="icon-circle">
+                ◉
+            </div>
+
+            <h2>Our Vision</h2>
+
+            <p>
+              To be the preferred choice for families 
+              seeking affordable and reliable baby wear,
+              delivering comfort, quality,
+              and value for every little one's journey.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="quality-section">
+
+    <!-- TITLE -->
+    <div class="quality-heading">
+
+        <h2>Quality & Trends</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="quality-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="quality-image">
+
+            <img src="{{ url_for('static',
+            filename='images/quality-baby.jpg') }}"
+            alt="Premium Baby Wear">
+
+        </div>
+
+
+        <!-- RIGHT TEXT -->
+        <div class="quality-content">
+
+            <h3>
+                Uncompromising <br>
+                Purity & Comfort
+            </h3>
+
+            <p>
+                At Little Touch, we believe that quality
+                is the greatest care we can offer to
+                little ones. Every fabric is thoughtfully
+                selected to ensure softness, comfort,
+                breathability, and premium craftsmanship
+                in every stitch.
+            </p>
+
+
+            <!-- FEATURES -->
+            <div class="quality-features">
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">🍃</span>
+
+                    <div>
+                        <h4>Premium Fabrics</h4>
+
+                        <p>
+                            Carefully selected combed cotton,
+                            waffle knit, corduroy, and soft
+                            baby-safe fabrics.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">💧</span>
+
+                    <div>
+                        <h4>Gentle Comfort</h4>
+
+                        <p>
+                            Designed to feel soft, breathable,
+                            and gentle for newborn and toddler skin.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    </section>
+
 </html>

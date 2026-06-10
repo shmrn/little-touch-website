@@ -4,10 +4,15 @@
     <title>Little Touch</title>
 
     <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+    href="{{ url_for('static',
+    filename='style.css') }}">
 
     <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    content="width=device-width,
+    initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 </head>
 
 <body>
@@ -16,127 +21,285 @@
     <nav class="navbar">
 
         <div class="logo-container">
+
             <img src="{{ url_for('static',
             filename='images/logo.png') }}"
             class="logo">
+
         </div>
 
-       <div class="nav-links">
-    <a href="/services">Services</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
+        <div class="nav-links">
 
-    <a href="/about"
-    class="about-btn">
-        About Us
-    </a>
-</div>
+            <a href="/services">
+                Services
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+            <a href="/about"
+            class="about-btn">
+
+                About Us
+
+            </a>
+
+        </div>
 
     </nav>
 
 
-    <!-- HERO SECTION -->
+   <!-- HERO SECTION -->
 <section class="hero">
 
-    <!-- HEADLINE -->
-    <div class="headline-container">
+    <div class="right-section">
 
-        <div class="headline-track">
+        <!-- IMAGE -->
+        <img id="hero-image"
 
-            <h1 class="headline">
-                <span class="blue">
-                    Growing With Care
-                </span>
-                <span class="pink">Today</span>
-                <span class="blue">
-                    for a Brighter
-                </span>
-                <span class="pink">Tomorrow✧</span>
-            </h1>
+        src="/static/images/homeimage1.png"
 
-            <h1 class="headline">
-                <span class="blue">
-                    Growing With Care
-                </span>
-                <span class="pink">Today</span>
-                <span class="blue">
-                    for a Brighter
-                </span>
-                <span class="pink">Tomorrow ✦</span>
-            </h1>
+        class="baby-image">
 
-        </div>
+<!-- TEXT ON IMAGE -->
+<div class="hero-overlay">
 
-    </div>
-</section>
-        <!-- CONTENT AREA -->
-        <div class="hero-content">
+    <h1 id="hero-title">
 
-            <!-- LEFT SIDE -->
-            <div class="left-section">
+        Created with love
+        for your little ones,
 
-                <p class="description">
-                   We create thoughtful designs that turn little moments
-                    into beautiful beginnings,
-                     wrapping every childhood memory in comfort,
-                      care, and timeless style.
-                </p>
+    </h1>
 
-                <a href="/services"
-                class="btn">
+    <p id="hero-subtitle">
+
+        Experience comfort,
+        care, and timeless style.
+
+    </p>
+
+    <a href="/about"
+                class="hero-btn">
                     GET STARTED
                 </a>
 
-            </div>
+</div>
 
+        <!-- DOTS -->
+        <div class="slider-dots">
 
-            <!-- RIGHT SIDE IMAGE -->
-            <div class="right-section">
+            <span class="dot active"
+            onclick="setImage(0)">
+            </span>
 
-                <img src="{{ url_for('static',
-                filename='images/home-image.png') }}"
-                class="baby-image">
-
-            </div>
-
+            <span class="dot"
+            onclick="setImage(1)">
+            </span>
         </div>
-
-        <section class="categories">
-
-    <div class="category-card">
-
-        <img src="{{ url_for('static',
-        filename='images/newborn.jpg') }}"
-        class="flower-image">
-
-        <h3>New Born</h3>
-
-    </div>
-
-
-    <div class="category-card">
-
-        <img src="{{ url_for('static',
-        filename='images/girl.png') }}"
-        class="flower-image">
-
-        <h3>Girl</h3>
-
-    </div>
-
-
-    <div class="category-card">
-
-        <img src="{{ url_for('static',
-        filename='images/boy.png') }}"
-        class="flower-image">
-
-        <h3>Boy</h3>
-
-    </div>
-
+        </div>
 </section>
+     <section class="product-grid">
+<div class="product-card">
+    <a href="/product/dress1">
+        <img id="dress1"
+        src="/static/images/dress1-1.png"
+        class="dress-image"
+        onmouseover="startSlideshow(
+        'dress1',
+        [
+        '/static/images/dress1-1.png',
+        '/static/images/dress1-2.png',
+        '/static/images/dress1-3.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress1',
+        '/static/images/dress1-1.png'
+        )">
+    </a>
+    <div class="product-info">
+        <h3>
+            LT-341
+        </h3>
+    </div>
+</div>
 
+    <div class="product-card">
+        <a href="/product/dress2">
+            <img id="dress2"
+             src="/static/images/dress2-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress2',
+        [
+        '/static/images/dress2-1.png',
+        '/static/images/dress2-2.png',
+        '/static/images/dress2-3.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress2',
+        '/static/images/dress2-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-343
+            </h3>
+        </div>
+    </div>
+  <div class="product-card">
+        <a href="/product/dress3">
+            <img id="dress3"
+             src="/static/images/dress3-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress3',
+        [
+        '/static/images/dress3-1.png',
+        '/static/images/dress3-2.png',
+        '/static/images/dress3-3.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress3',
+        '/static/images/dress3-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-342
+            </h3>
+        </div>
+    </div>
+ <div class="product-card">
+        <a href="/product/dress4">
+            <img id="dress4"
+             src="/static/images/dress4-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress4',
+        [
+        '/static/images/dress4-1.png',
+        '/static/images/dress4-2.png',
+        '/static/images/dress4-3.png',
+        '/static/images/dress4-4.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress4',
+        '/static/images/dress4-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-344
+            </h3>
+    </div>
+</div>
+    <div class="product-card">
+        <a href="/product/dress5">
+            <img id="dress5"
+             src="/static/images/dress5-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress5',
+        [
+        '/static/images/dress5-1.png',
+        '/static/images/dress5-2.png',
+        '/static/images/dress5-3.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress5',
+        '/static/images/dress5-1.png'
+        )">
+        </a>
+
+        <div class="product-info">
+            <h3>
+                LT-332
+            </h3>
+        </div>
+    </div>
+    <div class="product-card">
+        <a href="/product/dress6">
+            <img id="dress6"
+             src="/static/images/dress6-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress6',
+        [
+        '/static/images/dress6-1.png',
+        '/static/images/dress6-2.png',
+        '/static/images/dress6-3.png',
+
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress6',
+        '/static/images/dress6-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-331
+            </h3>
+        </div>
+    </div>
+    <div class="product-card">
+        <a href="/product/dress7">
+            <img id="dress7"
+             src="/static/images/dress7-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress7',
+        [
+        '/static/images/dress7-1.png',
+        '/static/images/dress7-2.png',
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress7',
+        '/static/images/dress7-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-333
+            </h3>
+        </div>
+    </div>
+    <div class="product-card">
+        <a href="/product/dress8">
+            <img id="dress8"
+             src="/static/images/dress8-1.png"
+            class="dress-image"
+             onmouseover="startSlideshow(
+        'dress8',
+        [
+        '/static/images/dress8-1.png',
+        '/static/images/dress8-2.png',
+        '/static/images/dress8-3.png',
+        '/static/images/dress8-4.png'
+        ]
+        )"
+        onmouseleave="stopSlideshow(
+        'dress8',
+        '/static/images/dress8-1.png'
+        )">
+        </a>
+        <div class="product-info">
+            <h3>
+                LT-202
+            </h3>
+        </div>
+    </div>
     </section>
 
     <footer class="footer">
@@ -145,11 +308,13 @@
 
         <h2>Categories</h2>
 
+        <p>Jablas</p>
+        <p>Dailywear unisex</p>
         <p>Boy Baby Dresses</p>
         <p>Girl Baby Dresses</p>
-        <p>Onesies & Rhompers</p>
-        <p>Jhablas</p>
-
+        <p>Formal Wear</p>
+        <p>Onesies & Rompers</p>
+        <p>Sleepwear</p>
     </div>
 
 
@@ -166,19 +331,6 @@
     </a>
 
 </div>
-
-
-    <div class="footer-section">
-
-        <h2>Our Other Websites</h2>
-
-        <a href="https://lovevio.in"
-        target="_blank">
-            lovevio.in
-        </a>
-
-    </div>
-
 
     <div class="footer-section">
 
@@ -210,29 +362,186 @@
 
     <h2>Connect With Us</h2>
 
-    <a href="https://www.instagram.com/littletouchbabycare/"
-    target="_blank">
-        Instagram
+<div class="social-icons">
+
+    <a href="https://www.instagram.com/littletouchbabycare/" target="_blank">
+        <i class="fab fa-instagram"></i>
     </a>
 
-    <a href="https://www.facebook.com/profile.php?id=61557069882388"
-    target="_blank">
-        Facebook
+    <a href="https://www.facebook.com/profile.php?id=61557069882388" target="_blank">
+        <i class="fab fa-facebook"></i>
     </a>
 
-    <a href="https://www.linkedin.com/in/little-touch-44b73a40b/"
-    target="_blank">
-        LinkedIn
+    <a href="https://www.linkedin.com/in/little-touch-44b73a40b/" target="_blank">
+        <i class="fab fa-linkedin"></i>
     </a>
 
-    <a href="https://wa.me/919048994799"
-    target="_blank">
-        WhatsApp
+    <a href="https://wa.me/919048994799" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
 </div>
 
 </footer>
+<!--.....Hero Slider.....-->
+<script>
 
+window.onload = function(){
+
+const slides = [
+
+{
+image:
+"/static/images/homeimage1.png",
+
+title:
+"Created with love for your little ones,",
+
+subtitle:
+"Experience comfort, care, and timeless style."
+},
+
+{
+image:
+"/static/images/homeimage2.png",
+
+title:
+"JOYFUL COLLECTIONS",
+
+subtitle:
+"Designed for happy little moments."
+}
+
+];
+
+let currentIndex = 0;
+
+const heroImage =
+document.getElementById(
+"hero-image"
+);
+
+const heroTitle =
+document.getElementById(
+"hero-title"
+);
+
+const heroSubtitle =
+document.getElementById(
+"hero-subtitle"
+);
+
+const dots =
+document.querySelectorAll(
+".dot"
+);
+
+function updateDots(){
+
+dots.forEach(dot =>
+dot.classList.remove(
+"active"
+));
+
+dots[currentIndex]
+.classList.add(
+"active");
+}
+
+function updateSlide(){
+
+heroImage.src =
+slides[currentIndex]
+.image;
+
+heroTitle.innerText =
+slides[currentIndex]
+.title;
+
+heroSubtitle.innerText =
+slides[currentIndex]
+.subtitle;
+
+updateDots();
+}
+
+function changeSlide(){
+
+currentIndex =
+(currentIndex + 1)
+% slides.length;
+
+updateSlide();
+}
+
+window.setImage =
+function(index){
+
+currentIndex = index;
+
+updateSlide();
+};
+
+setInterval(
+changeSlide,
+5000
+);
+
+updateSlide();
+
+};
+
+</script>
+<!---.Dress Hover Slideshow--->
+<script>
+
+const intervals = {};
+
+
+function startSlideshow(
+imageId,
+images
+){
+
+let index = 0;
+
+const image =
+document.getElementById(
+imageId
+);
+
+intervals[imageId] =
+setInterval(() => {
+
+index =
+(index + 1)
+% images.length;
+
+image.src =
+images[index];
+
+}, 800);
+
+}
+
+
+function stopSlideshow(
+imageId,
+firstImage
+){
+
+clearInterval(
+intervals[imageId]
+);
+
+document.getElementById(
+imageId
+).src =
+firstImage;
+
+}
+
+</script>
 </body>
+
 </html>

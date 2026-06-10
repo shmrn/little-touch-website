@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services | Little Touch</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo-container">
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            class="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO IMAGE -->
+    <section class="services-hero-image">
+
+        <img src="{{ url_for('static',
+        filename='images/services-banner.png') }}"
+        class="full-service-image">
+
+    </section>
+
+
+    <!-- SERVICES CONTENT -->
+    <section class="services-content">
+
+        <h2 class="center-title">
+            Baby Clothing Manufacturing
+        </h2>
+
+        <p class="service-text">
+            Premium baby wear manufacturing for newborns,
+            infants, and toddlers with comfort-focused
+            designs up to 0–2 years.
+        </p>
+
+
+        <h2 class="center-title">
+            Custom Baby Wear Design
+        </h2>
+
+        <p class="service-text">
+            Customized baby clothing including unique
+            patterns, prints, embroidery, colors,
+            and fabrics.
+        </p>
+
+
+        <h2 class="center-title">
+            Bulk & Wholesale Orders
+        </h2>
+
+        <p class="service-text">
+            Wholesale baby wear manufacturing for
+            baby shops, retailers, resellers,
+            and online stores.
+        </p>
+
+
+        <h2 class="center-title">
+            Fabric Selection & Sampling
+        </h2>
+
+        <p class="service-text">
+            Premium combed cotton fabrics with
+            sample products before bulk production.
+        </p>
+
+
+        <h2 class="center-title">
+            Pan-India Shipping
+        </h2>
+
+        <p class="service-text">
+            Reliable shipping and delivery support
+            across India.
+        </p>
+
+    </section>
+
+</body>
+</html>
