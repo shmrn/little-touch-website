@@ -1143,7 +1143,9 @@ background:white;
     background:#b3acb1;
     transform:scale(1.2);
 }
- 
+ *, *::before, *::after {
+    box-sizing: border-box;
+}
   @media (max-width: 768px) {
     .product-detail-container {
         flex-direction: column;
@@ -1263,4 +1265,20 @@ background:white;
     .social-icons {
         justify-content: center;
     }
+}
+/* CONTACT CARDS MOBILE FIX */
+.contact-boxes {
+    flex-direction: column;
+}
+
+.contact-card {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: unset;
+}
+
+.contact-card a {
+    font-size: 16px;       /* slightly smaller so email fits */
+    word-break: break-word; /* fallback: wraps only if truly needed */
+    white-space: nowrap;    /* keeps email on one line */
 }
